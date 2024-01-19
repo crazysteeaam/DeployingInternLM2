@@ -3,8 +3,7 @@ import torch
 import streamlit as st
 from openxlab.model import download
 from modelscope import snapshot_download
-import os
-env_value = os.getenv({'level'})
+level = os.getenv('level')
 
 with st.sidebar:
     st.markdown("## 书生·浦语 2.0 全新体验！")
@@ -12,12 +11,12 @@ with st.sidebar:
     max_length = st.slider("max_length", 0, 1024, 512, step=1)
     system_prompt = st.text_input("System_Prompt", "")
 
-st.title("InternLM2-Chat-"+ str(env_value) +"B")
+st.title("InternLM2-Chat-"+ str(level) +"B")
 st.caption("🚀 Powered By Shanghai Ai Lab")
 
 # 定义模型路径
 ## ModelScope
-model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(env_value) +'b'
+model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(level) +'b'
 mode_name_or_path = snapshot_download(model_id, revision='master')
 
 # OpenXLab
