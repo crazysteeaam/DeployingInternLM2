@@ -6,11 +6,11 @@ from modelscope import snapshot_download
 
 with st.sidebar:
     st.markdown("## 书生·浦语 2.0 全新体验！")
-    "[InternLM](https://github.com/InternLM/InternLM.git)"
+    "欢迎使用 [InternLM2](https://github.com/InternLM/InternLM.git)"
     max_length = st.slider("max_length", 0, 1024, 512, step=1)
     system_prompt = st.text_input("System_Prompt", "")
 
-st.title("InternLM2-Chat-20B")
+st.title("InternLM2-Chat-7B")
 st.caption("🚀 Powered By Shanghai Ai Lab")
 
 # 定义模型路径
