@@ -9,6 +9,7 @@ from torch import nn
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.utils import LogitsProcessorList, StoppingCriteriaList
 from transformers.utils import logging
+from modelscope import snapshot_download
 import os
 
 logger = logging.get_logger(__name__)
