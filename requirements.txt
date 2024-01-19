@@ -6,4 +6,3 @@ accelerate==0.24.1
 transformers_stream_generator==0.0.4
 openxlab==0.0.34
 tiktoken
-os
