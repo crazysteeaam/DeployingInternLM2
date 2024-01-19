@@ -14,7 +14,8 @@ import os
 logger = logging.get_logger(__name__)
 level = os.getenv('level')
 
-model_name_or_path = "/root/model/Shanghai_AI_Laboratory/internlm2-chat-"+ str(level) +"b"
+model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(level) +'b'
+model_name_or_path = snapshot_download(model_id, revision='master')
 
 
 @dataclass
