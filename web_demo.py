@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from openxlab.model import download
 from transformers.generation.utils import LogitsProcessorList, StoppingCriteriaList
 from transformers.utils import logging
-from modelscope import snapshot_download
+# from modelscope import snapshot_download
 import os
 
 logger = logging.get_logger(__name__)
