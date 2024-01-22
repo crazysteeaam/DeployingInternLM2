@@ -7,6 +7,7 @@ import streamlit as st
 import torch
 from torch import nn
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from openxlab.model import download
 from transformers.generation.utils import LogitsProcessorList, StoppingCriteriaList
 from transformers.utils import logging
 from modelscope import snapshot_download
@@ -15,8 +16,12 @@ import os
 logger = logging.get_logger(__name__)
 level = os.getenv('level')
 
-model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(level) +'b'
-model_name_or_path = snapshot_download(model_id, revision='master')
+# model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(level) +'b'
+# model_name_or_path = snapshot_download(model_id, revision='master')
+
+# OpenXLab
+model_repo = "OpenLMLab/internlm2-chat-7b"
+model_name_or_path = download(model_repo=model_repo)
 
 
 @dataclass
