@@ -2,7 +2,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 import torch
 import streamlit as st
 from openxlab.model import download
-from modelscope import snapshot_download
+# from modelscope import snapshot_download
 import os
 
 level = os.getenv('level')
