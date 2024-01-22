@@ -18,12 +18,12 @@ st.caption("🚀 Powered By Shanghai Ai Lab")
 
 # 定义模型路径
 ## ModelScope
-model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(level) +'b'
-mode_name_or_path = snapshot_download(model_id, revision='master')
+# model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(level) +'b'
+# mode_name_or_path = snapshot_download(model_id, revision='master')
 
 # OpenXLab
-# model_repo = "OpenLMLab/internlm2-chat-7b"
-# mode_name_or_path = download(model_repo=model_repo)
+model_repo = "OpenLMLab/internlm2-chat-7b"
+mode_name_or_path = download(model_repo=model_repo)
 
 
 @st.cache_resource
