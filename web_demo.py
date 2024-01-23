@@ -21,7 +21,8 @@ level = os.getenv('level')
 
 # OpenXLab
 model_repo = "OpenLMLab/internlm2-chat-7b"
-model_name_or_path = download(model_repo=model_repo,output='internlm2-chat-7b')
+download(model_repo=model_repo,output='internlm2-chat-7b')
+model_name_or_path = './internlm2-chat-7b'
 
 
 @dataclass
