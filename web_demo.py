@@ -18,7 +18,7 @@ level = os.getenv('level')
 
 async def model_download(model_repo, output):
     if not os.path.exists(output):
-        await download(model_repo=model_repo, output='internlm2-chat-7b')
+        await download(model_repo=model_repo, output=output)
     return output
 
 # model_id = 'Shanghai_AI_Laboratory/internlm2-chat-'+ str(level) +'b'
@@ -26,7 +26,7 @@ async def model_download(model_repo, output):
 
 # OpenXLab
 model_repo = "OpenLMLab/internlm2-chat-7b"
-model_name_or_path = model_download(model_repo=model_repo, output='internlm2-chat-7b')
+model_name_or_path = model_download(model_repo=model_repo, output='./internlm2-chat-7b')
 
 @dataclass
 class GenerationConfig:
